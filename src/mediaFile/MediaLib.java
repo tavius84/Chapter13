@@ -2,82 +2,102 @@ package mediaFile;
 
 public class MediaLib {
     public static void main(String[] args) {
-        double totalCost = 0;
-        double aveRating = 0;
+        double totalCost = 0.0;
+        double totalRating = 0;
+        int numSongs = 0;
+        double aveCost;
+        double aveRating;
 
         System.out.println("Welcome to your Media Library");
-        Song getNumSongs = new Song();
-        Song song1 = new Song("OOO kill em",1.29,8);
-        System.out.println(song1.getTitle() + " " + song1.getTitle() + " " + song1.getTitle());
-        totalCost = song1.getPrice() + totalCost;
-        aveRating = song1.getRating() + aveRating;
+        // according to Billboard's greatest songs...
+        Song song1 =  new Song("The Twist", 1.29, 10);
+        numSongs = numSongs + 1;
+        totalCost = totalCost + song1.getPrice();
+        totalRating = totalRating + song1.getRating();
         MediaFile.writeString(song1.getTitle() + "|" + song1.getRating());
-        Song song2 = new Song("ya yeet",1.50,9);
-        System.out.println(song2.getTitle() + " " + song2.getTitle() + " " + song2.getTitle());
-        totalCost = song2.getPrice() + totalCost;
-        aveRating = song2.getRating() + aveRating;
-        MediaFile.writeString(song2.getTitle() + "|" + song2.getRating());
 
+        Song song2 =  new Song("Smooth", .99, 9);
+        numSongs = numSongs + 1;
+        totalCost = totalCost + song2.getPrice();
+        totalRating = totalRating + song2.getRating();
 
-        Song song3 = new Song("Bofa",1.50,10);
-        System.out.println(song3.getTitle() + " " + song3.getTitle() + " " + song3.getTitle());
-        totalCost = song3.getPrice() + totalCost;
-        aveRating = song3.getRating() + aveRating;
-        MediaFile.writeString(song3.getTitle() + "|" + song3.getRating());
-        Song song4 = new Song("Joe",1.50,4);
-        System.out.println(song4.getTitle() + " " + song4.getTitle() + " " + song4.getTitle());
-        totalCost = song4.getPrice() + totalCost;
-        aveRating = song4.getRating() + aveRating;
-        MediaFile.writeString(song4.getTitle() + "|" + song4.getRating());
-        Song song5 = new Song("Deez",1.50,7);
-        System.out.println(song5.getTitle() + " " + song5.getTitle() + " " + song5.getTitle());
-        totalCost = song5.getPrice() + totalCost;
-        aveRating = song5.getRating() + aveRating;
-        MediaFile.writeString(song5.getTitle() + "|" + song5.getRating());
-        Song song6 = new Song("Ligma",1.50,8);
-        System.out.println(song6.getTitle() + " " + song6.getTitle() + " " + song6.getTitle());
-        totalCost = song6.getPrice() + totalCost;
-        aveRating = song6.getRating() + aveRating;
-        MediaFile.writeString(song6.getTitle() + "|" + song6.getRating());
-        Song song7 = new Song("Sugon",1.50,99);
-        System.out.println(song7.getTitle() + " " + song7.getTitle() + " " + song7.getTitle());
-        totalCost = song7.getPrice() + totalCost;
-        aveRating = song7.getRating() + aveRating;
-        MediaFile.writeString(song7.getTitle() + "|" + song7.getRating());
-        Song song8 = new Song("up dog",1.50,13);
-        System.out.println(song8.getTitle() + " " + song8.getTitle() + " " + song8.getTitle());
-        totalCost = song8.getPrice() + totalCost;
-        aveRating = song8.getRating() + aveRating;
-        MediaFile.writeString(song8.getTitle() + "|" + song8.getRating());
+        Song song3 =  new Song("Mack the Knife", 1.29, 8);
+        numSongs = numSongs + 1;
+        totalCost = totalCost + song3.getPrice();
+        totalRating = totalRating + song3.getRating();
 
-        System.out.println("Total cost: "+ totalCost );
-        System.out.println("Average Rating: " +aveRating/getNumSongs.getNumSongs());
+        Song song4 =  new Song("How Do I Live", 99, 7);
+        numSongs = numSongs + 1;
+        totalCost = totalCost + song4.getPrice();
+        totalRating = totalRating + song4.getRating();
 
-        Books book1 = new Books();
-        Movies movie1 = new Movies();
+        Song song5 =  new Song("Party Rock Anthem", 1.29, 6);
+        numSongs = numSongs + 1;
+        totalCost = totalCost + song5.getPrice();
+        totalRating = totalRating + song5.getRating();
 
-        System.out.println(song1);
-        song1.setTitle("Johnny B. Goode");
-        System.out.println(song1.getTitle());
-        System.out.println(song1.getRating());
-        System.out.println(song1.getPrice());
-        System.out.println(book1);
-        book1.setTitle("Children of the Corn");
-        System.out.println(book1.getTitle());
-        System.out.println(book1.getRating());
+        Song song6 =  new Song("I Gotta Feeling", .99, 7);
+        numSongs = numSongs + 1;
+        totalCost = totalCost + song6.getPrice();
+        totalRating = totalRating + song6.getRating();
 
-        System.out.println(movie1);
-        movie1.setTitle("Battle LA");
-        System.out.println(movie1.getTitle());
-        System.out.println(movie1.getRating());
-        //String songInfo = MediaFile.readString();
-       // System.out.println(songInfo);
+        Song song7 =  new Song("Macaren", 1.29, 8);
+        numSongs = numSongs + 1;
+        totalCost = totalCost + song7.getPrice();
+        totalRating = totalRating + song7.getRating();
+
+        Song song8 =  new Song("Physical", .99, 9);
+        numSongs = numSongs + 1;
+        totalCost = totalCost + song8.getPrice();
+        totalRating = totalRating + song8.getRating();
+
+        Song song9 =  new Song("You Light Up My Life", 1.29, 10);
+        numSongs = numSongs + 1;
+        totalCost = totalCost + song9.getPrice();
+        totalRating = totalRating + song9.getRating();
+
+        Song song10 =  new Song("Hey Jude", .99, 9);
+        numSongs = numSongs + 1;
+        totalCost = totalCost + song10.getPrice();
+        totalRating = totalRating + song10.getRating();
 
         String s = MediaFile.readString();
-        while (s != null){
-            System.out.println("From File: " + s);
+        MediaFile.saveAndClose();
+        while(s !=null){
+            System.out.println(s);
             s = MediaFile.readString();
         }
-        MediaFile.saveAndClose();
+
+        /**** test code is commented out
+         double testVal = 109.41;
+         double testResult  = testVal / 10;
+         System.out.println("Testing Result:");
+         System.out.println(testResult);
+         *****/
+
+        System.out.println("Number of songs:");
+        System.out.println(numSongs);
+
+        System.out.println("Total cost:");
+        System.out.println(totalCost);
+
+        aveCost = totalCost / numSongs;
+        System.out.println("Average cost:");
+        System.out.println(aveCost);
+
+        aveRating = totalRating / numSongs;
+        System.out.println("Average rating:");
+        System.out.println(aveRating);
+
+        Movie movie1 = new Movie();
+        movie1.setTitle("Young Frankenstein");
+        System.out.println(movie1.getTitle());
+        movie1.setDuration(134);
+        movie1.showHoursMinutes();
+
+        System.out.println("NumSongsInLibrary "+ song10.getNumSongsInLibrary()
+                + " should equal " + numSongs);
+
+
     }
 }

@@ -3,7 +3,7 @@ package mediaFile;
 import java.util.List;
 import java.util.ArrayList;
 
-public class ScrambledStrings
+public class ScrambleStrings
 {
     /********************** Part (a) *********************/
 

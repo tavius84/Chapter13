@@ -1,34 +1,46 @@
 package mediaFile;
 
 public class Song {
+    private static int numSongsInLibrary;
+
     private String title;
     private int rating;
-    private double price;
     private boolean favorite;
-    private static int numSongs = 0;
-    public Song(){
+    private double  price;
+    /**
+     * Constructor for objects of class Song
+     */
+    public Song()
+    {
+        // initialise instance variables
+        rating = 0;
         title = "";
-        rating = 4;
         price = 0.0;
+
+        numSongsInLibrary = numSongsInLibrary + 1;
     }
 
-    public Song(String t, double p) {
-        this.title = t;
-        this.price = p;
-        numSongs++;
+    public Song(String title, double price) {
+        this.title = title;
+        this.price = price;
+
+        numSongsInLibrary = numSongsInLibrary + 1;
     }
-    public Song(String t, double p, int r) {
-        this.title = t;
-        this.price = p;
-        this.rating = r;
-        numSongs++;
+
+    public Song(String title, double price, int rating) {
+        this.title = title;
+        this.price = price;
+        this.rating = rating;
+
+        numSongsInLibrary = numSongsInLibrary + 1;
     }
-    public String getTitle(){
+
+    public String getTitle() {
         return title;
     }
 
     public void setTitle(String t) {
-        this.title = t;
+        title = t;
     }
 
     public int getRating() {
@@ -36,7 +48,7 @@ public class Song {
     }
 
     public void setRating(int r) {
-        this.rating = r;
+        rating = r;
     }
 
     public double getPrice() {
@@ -46,11 +58,12 @@ public class Song {
     public void setPrice(double p) {
         price = p;
     }
-    public void addToFavorites(){
+
+    public void addToFavorites() {
         favorite = true;
     }
 
-    public int getNumSongs(){
-        return numSongs;
+    public int getNumSongsInLibrary() {
+        return numSongsInLibrary;
     }
 }
