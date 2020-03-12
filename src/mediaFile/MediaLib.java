@@ -20,11 +20,13 @@ public class MediaLib {
         numSongs = numSongs + 1;
         totalCost = totalCost + song2.getPrice();
         totalRating = totalRating + song2.getRating();
+        MediaFile.writeString(song2.getTitle() + "|" + song2.getRating());
 
         Song song3 =  new Song("Mack the Knife", 1.29, 8);
         numSongs = numSongs + 1;
         totalCost = totalCost + song3.getPrice();
         totalRating = totalRating + song3.getRating();
+        MediaFile.writeString(song3.getTitle() + "|" + song3.getRating());
 
         Song song4 =  new Song("How Do I Live", 99, 7);
         numSongs = numSongs + 1;
@@ -61,8 +63,9 @@ public class MediaLib {
         totalCost = totalCost + song10.getPrice();
         totalRating = totalRating + song10.getRating();
 
-        String s = MediaFile.readString();
         MediaFile.saveAndClose();
+        String s = MediaFile.readString();
+
         while(s !=null){
             System.out.println(s);
             s = MediaFile.readString();
